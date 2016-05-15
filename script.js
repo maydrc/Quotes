@@ -1,16 +1,17 @@
 function getQuote () {
   // JSON API to get random quotes
-  $.getJSON("http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1&_jsonp=?", function(response) {
+  $.getJSON("http://api.forismatic.com/api/1.0/?method=getQuote&key=457653&format=jsonp&lang=en&jsonp=?", function(response) {
+    console.log(response);
 
-    var author = response[0].title;
-    var quote = response[0].content;
+    var author = response.quoteAuthor || "anonymous";
+    var quote = response.quoteText;
     var twitterLink = "";
     var quoteElement = $("blockquote");
     var newQuoteElement = quoteElement.clone(true);
     var hexColor = randomColor({luminosity: 'dark'});
 
-    quote = quote.substring(3, quote.length-5);
-    twitterLink = 'https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=' + encodeURIComponent(quote) + ' - ' + author;
+    // compose the Link which will post the quote in Twitter
+    twitterLink = 'https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=' + encodeURIComponent(quote) + ' — ' + author;
 
     // assing the quote and author to the HTML elements
     newQuoteElement.find("#spanQuote").html(quote);
