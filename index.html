@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- To make it work in mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Quotes</title>
+    <!-- CSS Starts Here! -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway|Lato" type='text/css'>
+    <link rel="stylesheet" href="style.css" />
+    <!-- CSS Ends Here! -->
+  </head>
+  <body>
+    <div class="container containerHeight">
+      <div class = "row text-center fixHeight"></div>
+      <div class = "row text-center fixHeight">
+        <div class = "col-xs-12 textStyling">
+          <blockquote class="animated zoomIn">
+            <p><i class="fa fa-quote-left quoteSpacingRight"></i><span id = "spanQuote"></span><i class="fa fa-quote-right quoteSpacingLeft"></i></p>
+            <footer id = "author" class="textRight"></footer>
+          </blockquote>
+        </div>
+      </div>
+      <div class = "row text-center fixHeight textLeft">
+        <div class = "col-xs-6">
+          <a href="#" id = "getQuote" class="QuoteButton">New Quote</a>
+        </div>
+        <div class = "col-xs-6 textRight">
+          <a href="#" target="_blank" id = "TwitterQuote" class="QuoteButton TwitterSize"><i class="fa fa-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+
+  <!-- JS Starts Here! -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/randomcolor/0.4.4/randomColor.min.js"></script>
+  <script src="script.js"></script>
+  <!-- JS Ends Here! -->
+  </body>
+</html>
